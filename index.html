@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moova Hair &amp; Beauty — Salon Kecantikan Denpasar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/css2" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --maroon: #7B1F2E;
+    --maroon-deep: #4A0E1A;
+    --maroon-mid: #9B2D3F;
+    --maroon-pale: #f7edef;
+    --maroon-pale2: #ede4e6;
+    --cream: #FAF8F5;
+    --off-white: #F4F1EE;
+    --gray-muted: #8A857F;
+    --gray-border: #E0DAD6;
+    --dark-bg: #160508;
+    --dark-card: #1f0a0f;
+    --text-dark: #1A1410;
+    --text-mid: #6B6460;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(250, 248, 245, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--maroon); text-decoration: none; letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 14px; color: var(--text-mid); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--maroon); }
+  .nav-cta { background: var(--maroon); color: #fff; padding: 10px 24px; border-radius: 999px; font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+  .nav-cta:hover { background: var(--maroon-deep); transform: scale(0.98); }
+
+  /* HERO */
+  .hero {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 560px;
+    position: relative; overflow: hidden;
+  }
+  .hero-left {
+    background: var(--cream);
+    padding: 80px 56px;
+    display: flex; flex-direction: column; justify-content: center; gap: 20px;
+    position: relative; z-index: 1;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 100% 100% at 0% 50%, rgba(123,31,46,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 12px; font-weight: 500; color: var(--maroon);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    color: var(--text-dark); line-height: 1.02; letter-spacing: -2px;
+    opacity: 0; animation: fadeUp 0.7s ease forwards 0.25s;
+  }
+  .hero h1 em { font-style: italic; color: var(--maroon); }
+  .hero-sub {
+    font-size: 17px; color: var(--text-mid); font-weight: 300; line-height: 1.55; max-width: 380px;
+    opacity: 0; animation: fadeUp 0.7s ease forwards 0.4s;
+  }
+  .hero-actions {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.7s ease forwards 0.55s;
+  }
+  .btn-solid { background: var(--maroon); color: #fff; padding: 14px 32px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.1s; display: inline-block; }
+  .btn-solid:hover { background: var(--maroon-deep); transform: scale(0.98); }
+  .btn-outline { background: transparent; color: var(--maroon); padding: 13px 32px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1.5px solid var(--maroon); transition: background 0.2s, transform 0.1s; display: inline-block; }
+  .btn-outline:hover { background: var(--maroon-pale); transform: scale(0.98); }
+
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; animation: fadeIn 1s ease forwards 0.3s; }
+  .hero-right::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(250,248,245,0.3) 0%, transparent 30%);
+  }
+
+  /* STRIP */
+  .strip { display: flex; justify-content: center; border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); background: #fff; }
+  .strip-item { flex: 1; max-width: 200px; text-align: center; padding: 36px 24px; border-right: 1px solid var(--gray-border); }
+  .strip-item:last-child { border-right: none; }
+  .strip-num { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--maroon); letter-spacing: -1px; line-height: 1; }
+  .strip-label { font-size: 12px; color: var(--gray-muted); margin-top: 4px; }
+
+  /* SERVICES */
+  .services-section { padding: 96px 48px; background: var(--cream); }
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .eyebrow { font-size: 12px; font-weight: 500; color: var(--maroon); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; display: block; }
+  .section-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 48px); color: var(--text-dark); letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 14px; }
+  .section-header p { font-size: 16px; color: var(--text-mid); max-width: 440px; margin: 0 auto; font-weight: 300; line-height: 1.6; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--gray-border); border: 1px solid var(--gray-border); border-radius: 20px; overflow: hidden; max-width: 960px; margin: 0 auto; }
+  .svc-card { background: var(--cream); display: flex; flex-direction: column; transition: background 0.2s; cursor: default; overflow: hidden; }
+  .svc-card:hover { background: #fff; }
+  .svc-img { width: 100%; height: 160px; object-fit: cover; display: block; }
+  .svc-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .svc-name { font-size: 15px; font-weight: 500; color: var(--text-dark); letter-spacing: -0.3px; }
+  .svc-desc { font-size: 13px; color: var(--text-mid); line-height: 1.55; font-weight: 300; flex: 1; }
+  .svc-price { font-size: 13px; color: var(--maroon); font-weight: 500; margin-top: 4px; }
+
+  /* GALLERY */
+  .gallery-section { padding: 96px 48px; background: var(--off-white); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 12px; max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden; }
+  .gallery-item { overflow: hidden; position: relative; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .gallery-item:hover img { transform: scale(1.04); }
+  .gallery-item.large { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 2; }
+
+  /* DARK SECTION */
+  .dark-section { background: var(--dark-bg); padding: 96px 48px; text-align: center; }
+  .dark-section .eyebrow { color: #c87080; }
+  .dark-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 48px); color: #fff; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 14px; }
+  .dark-section > p { font-size: 16px; color: rgba(255,255,255,0.45); max-width: 440px; margin: 0 auto 56px; font-weight: 300; line-height: 1.6; }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; max-width: 800px; margin: 0 auto; }
+  .why-card { background: var(--dark-bg); padding: 36px 28px; text-align: left; transition: background 0.2s; }
+  .why-card:hover { background: var(--dark-card); }
+  .why-num { font-family: 'DM Serif Display', serif; font-size: 40px; color: #c87080; letter-spacing: -1.5px; line-height: 1; margin-bottom: 12px; }
+  .why-name { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+  .why-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.55; font-weight: 300; }
+
+  /* TEAM */
+  .team-section { padding: 96px 48px; background: var(--cream); }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+  .team-card { text-align: center; }
+  .team-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; margin-bottom: 16px; transition: transform 0.3s; }
+  .team-card:hover .team-photo { transform: scale(1.02); }
+  .team-name { font-size: 15px; font-weight: 500; color: var(--text-dark); letter-spacing: -0.2px; }
+  .team-role { font-size: 13px; color: var(--maroon); margin-top: 3px; font-weight: 400; }
+
+  /* TESTIMONIALS */
+  .testi-section { padding: 96px 48px; background: var(--off-white); }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+  .testi-card { background: #fff; border: 1px solid var(--gray-border); border-radius: 20px; padding: 28px; }
+  .testi-stars { font-size: 14px; color: var(--maroon); letter-spacing: 3px; margin-bottom: 14px; }
+  .testi-text { font-size: 14px; color: var(--text-mid); line-height: 1.65; font-weight: 300; margin-bottom: 20px; }
+  .testi-author { display: flex; align-items: center; gap: 10px; }
+  .testi-av { width: 34px; height: 34px; border-radius: 50%; background: var(--maroon); color: #fff; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .testi-name { font-size: 13px; font-weight: 500; color: var(--text-dark); }
+  .testi-loc { font-size: 12px; color: var(--gray-muted); }
+
+  /* CTA */
+  .cta-section { background: var(--maroon); padding: 96px 48px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 6vw, 60px); color: #fff; letter-spacing: -2px; line-height: 1.05; }
+  .cta-section h2 em { font-style: italic; color: rgba(255,255,255,0.65); }
+  .cta-section p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 380px; line-height: 1.55; font-weight: 300; }
+  .btn-white { background: #fff; color: var(--maroon-deep); padding: 14px 34px; border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.1s; display: inline-block; margin-top: 4px; }
+  .btn-white:hover { background: #f0e8ea; transform: scale(0.98); }
+
+  /* CONTACT */
+  .contact-section { padding: 96px 48px; background: var(--cream); text-align: center; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
+  .contact-card { background: #fff; border: 1px solid var(--gray-border); border-radius: 16px; padding: 24px; text-align: left; display: flex; align-items: flex-start; gap: 14px; transition: border-color 0.2s; }
+  .contact-card:hover { border-color: var(--maroon-mid); }
+  .contact-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--maroon-pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-icon svg { width: 18px; height: 18px; stroke: var(--maroon); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .contact-label { font-size: 11px; color: var(--gray-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+  .contact-val { font-size: 13px; font-weight: 500; color: var(--text-dark); line-height: 1.4; }
+
+  /* FOOTER */
+  footer { background: var(--dark-bg); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: #fff; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 56px 24px; }
+    .hero-right { height: 280px; }
+    .strip { flex-wrap: wrap; }
+    .strip-item { max-width: 50%; width: 50%; border-right: none; border-bottom: 1px solid var(--gray-border); }
+    .strip-item:nth-child(odd) { border-right: 1px solid var(--gray-border); }
+    .services-section, .gallery-section, .dark-section, .team-section, .testi-section, .cta-section, .contact-section { padding: 64px 24px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-item.large { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 1; }
+    footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#" class="nav-logo">Moova</a>
+  <ul class="nav-links">
+    <li><a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#layanan">Layanan</a></li>
+    <li><a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#galeri">Galeri</a></li>
+    <li><a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#tim">Tim</a></li>
+    <li><a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#testimoni">Testimoni</a></li>
+    <li><a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#kontak">Kontak</a></li>
+  </ul>
+  <a href="https://wa.me/6281234567890" class="nav-cta">Booking Sekarang</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Hair &amp; Beauty · Denpasar, Bali</p>
+    <h1>Kecantikan itu<br><em>dimulai di sini.</em></h1>
+    <p class="hero-sub">Perawatan rambut dan kecantikan profesional. Dilakukan dengan cermat, untuk hasil yang bicara sendiri.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/6281234567890" class="btn-solid">Booking Sekarang</a>
+      <a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#layanan" class="btn-outline">Lihat Layanan</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- GANTI URL DI BAWAH DENGAN FOTO SALON ANDA -->
+    <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1560066984-138dadb4c035" alt="Moova Hair &amp; Beauty Salon">
+  </div>
+</section>
+
+<!-- STRIP STATS -->
+<div class="strip">
+  <div class="strip-item"><div class="strip-num">5+</div><div class="strip-label">Tahun pengalaman</div></div>
+  <div class="strip-item"><div class="strip-num">500+</div><div class="strip-label">Pelanggan puas</div></div>
+  <div class="strip-item"><div class="strip-num">4.9</div><div class="strip-label">Rating rata-rata</div></div>
+  <div class="strip-item"><div class="strip-num">15+</div><div class="strip-label">Terapis profesional</div></div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="layanan">
+  <div class="section-header reveal visible">
+    <span class="eyebrow">Layanan Kami</span>
+    <h2>Semua yang Anda butuhkan,<br>dalam satu tempat.</h2>
+    <p>Dari potong rambut harian hingga perawatan wajah intensif — tim kami siap membantu Anda tampil terbaik.</p>
+  </div>
+  <div class="services-grid reveal visible">
+    <div class="svc-card">
+      <!-- GANTI URL GAMBAR DENGAN FOTO LAYANAN ANDA -->
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1522337360788-8b13dee7a37e" alt="Potong Rambut">
+      <div class="svc-body">
+        <div class="svc-name">Potong Rambut</div>
+        <div class="svc-desc">Styling modern sesuai bentuk wajah dan gaya hidup Anda.</div>
+        <div class="svc-price">Mulai Rp 75.000</div>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1519415943484-9fa1873496d4" alt="Hair Treatment">
+      <div class="svc-body">
+        <div class="svc-name">Hair Treatment</div>
+        <div class="svc-desc">Nutrisi intensif untuk rambut yang sehat dan berkilau alami.</div>
+        <div class="svc-price">Mulai Rp 150.000</div>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1633108530220-cd47cf861abd" alt="Coloring">
+      <div class="svc-body">
+        <div class="svc-name">Coloring</div>
+        <div class="svc-desc">Pewarnaan premium aman, merata, dan tahan lama.</div>
+        <div class="svc-price">Mulai Rp 250.000</div>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1570172619644-dfd03ed5d881" alt="Facial">
+      <div class="svc-body">
+        <div class="svc-name">Facial &amp; Skincare</div>
+        <div class="svc-desc">Perawatan wajah mendalam untuk kulit cerah dan bersih.</div>
+        <div class="svc-price">Mulai Rp 100.000</div>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1487412912498-0447578fcca8" alt="Makeup">
+      <div class="svc-body">
+        <div class="svc-name">Makeup</div>
+        <div class="svc-desc">Natural atau bold — untuk setiap momen spesial Anda.</div>
+        <div class="svc-price">Mulai Rp 200.000</div>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-img" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1540555700478-4be289fbecef" alt="Creambath">
+      <div class="svc-body">
+        <div class="svc-name">Creambath</div>
+        <div class="svc-desc">Pijat relaksasi kepala dengan krim nutrisi berkualitas.</div>
+        <div class="svc-price">Mulai Rp 80.000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="galeri">
+  <div class="section-header reveal visible">
+    <span class="eyebrow">Galeri</span>
+    <h2>Hasil kerja kami.</h2>
+    <p>Setiap karya adalah bukti dedikasi tim kami terhadap kecantikan Anda.</p>
+  </div>
+  <div class="gallery-grid reveal visible">
+    <!-- GANTI URL GAMBAR DENGAN FOTO HASIL KERJA SALON ANDA -->
+    <div class="gallery-item large">
+      <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1562322140-8baeececf3df" alt="Galeri hasil salon 1">
+    </div>
+    <div class="gallery-item tall">
+      <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1605497788044-5a32c7078486" alt="Galeri hasil salon 2">
+    </div>
+    <div class="gallery-item">
+      <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1610992015732-2449b0dd2b8f" alt="Galeri hasil salon 3">
+    </div>
+    <div class="gallery-item">
+      <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1492106087820-71f1a00d2b11" alt="Galeri hasil salon 4">
+    </div>
+    <div class="gallery-item">
+      <img src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1559599101-f09722fb4948" alt="Galeri hasil salon 5">
+    </div>
+  </div>
+</section>
+
+<!-- WHY / DARK SECTION -->
+<section class="dark-section" id="keunggulan">
+  <span class="eyebrow reveal visible">Kenapa Moova</span>
+  <h2 class="reveal visible">Standar yang tidak<br>kami kompromikan.</h2>
+  <p class="reveal visible">Setiap kunjungan dirancang untuk memberi Anda pengalaman terbaik — dari produk yang kami pilih hingga tangan yang mengerjakan.</p>
+  <div class="why-grid reveal visible">
+    <div class="why-card"><div class="why-num">5+</div><div class="why-name">Tahun berpengalaman</div><div class="why-desc">Melayani ribuan pelanggan dengan kepuasan terjamin.</div></div>
+    <div class="why-card"><div class="why-num">100%</div><div class="why-name">Produk ber-BPOM</div><div class="why-desc">Aman untuk semua jenis kulit, termasuk sensitif.</div></div>
+    <div class="why-card"><div class="why-num">15+</div><div class="why-name">Terapis tersertifikasi</div><div class="why-desc">Terlatih dan mengikuti perkembangan tren terkini.</div></div>
+    <div class="why-card"><div class="why-num">★ 4.9</div><div class="why-name">Rating kepuasan</div><div class="why-desc">Dari ratusan ulasan nyata pelanggan setia kami.</div></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="tim">
+  <div class="section-header reveal">
+    <span class="eyebrow">Tim Kami</span>
+    <h2>Tangan-tangan terbaik,<br>untuk Anda.</h2>
+    <p>Tim kami adalah para profesional berdedikasi yang siap membantu Anda tampil percaya diri.</p>
+  </div>
+  <div class="team-grid reveal">
+    <!-- GANTI URL GAMBAR DENGAN FOTO TIM ANDA -->
+    <div class="team-card">
+      <img class="team-photo" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1595476108010-b4d1f102b1b1" alt="Rina - Senior Stylist">
+      <div class="team-name">Rina Kusuma</div>
+      <div class="team-role">Senior Hair Stylist</div>
+    </div>
+    <div class="team-card">
+      <img class="team-photo" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1614680376593-902f74cf0d41" alt="Sinta - Colorist">
+      <div class="team-name">Sinta Dewi</div>
+      <div class="team-role">Color Specialist</div>
+    </div>
+    <div class="team-card">
+      <img class="team-photo" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1508214751196-bcfd4ca60f91" alt="Maya - Beauty Therapist">
+      <div class="team-name">Maya Putri</div>
+      <div class="team-role">Beauty Therapist</div>
+    </div>
+    <div class="team-card">
+      <img class="team-photo" src="./Moova Hair &amp; Beauty — Salon Kecantikan Denpasar_files/photo-1531746020798-e6953c6e8e04" alt="Ayu - Makeup Artist">
+      <div class="team-name">Ayu Lestari</div>
+      <div class="team-role">Makeup Artist</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="testimoni">
+  <div class="section-header reveal">
+    <span class="eyebrow">Testimoni</span>
+    <h2>Mereka sudah merasakannya.</h2>
+    <p>Kepercayaan pelanggan adalah alasan kami terus berkembang.</p>
+  </div>
+  <div class="testi-grid reveal">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Rambut saya jauh lebih sehat dan berkilau setelah treatment di sini. Pelayanannya ramah dan tempatnya nyaman banget.</p>
+      <div class="testi-author"><div class="testi-av">SR</div><div><div class="testi-name">Sari R.</div><div class="testi-loc">Denpasar</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Sudah 2 tahun jadi pelanggan setia Moova. Coloringnya bagus dan tahan lama, harganya juga sangat worth it.</p>
+      <div class="testi-author"><div class="testi-av">DM</div><div><div class="testi-name">Dewi M.</div><div class="testi-loc">Kuta</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Facial-nya benar-benar bikin muka cerah. Stafnya profesional dan tempatnya bersih. Pasti balik lagi!</p>
+      <div class="testi-author"><div class="testi-av">AP</div><div><div class="testi-name">Ayu P.</div><div class="testi-loc">Seminyak</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Siap tampil<br><em>terbaik hari ini?</em></h2>
+  <p>Booking sekarang dan dapatkan konsultasi gratis. Slot terbatas setiap harinya.</p>
+  <a href="https://wa.me/6281234567890" class="btn-white">Booking via WhatsApp</a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="kontak">
+  <div class="section-header reveal">
+    <span class="eyebrow">Kontak &amp; Lokasi</span>
+    <h2>Temukan kami.</h2>
+    <p>Kami buka setiap Senin hingga Sabtu. Datang langsung atau booking dulu via WhatsApp.</p>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+      <div><div class="contact-label">Alamat</div><div class="contact-val">Jl. Kecantikan No. 12, Denpasar, Bali</div></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.22 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg></div>
+      <div><div class="contact-label">WhatsApp</div><div class="contact-val">+62 812-3456-7890</div></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+      <div><div class="contact-label">Jam Buka</div><div class="contact-val">Senin–Sabtu<br>09.00–20.00 WITA</div></div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+      <div><div class="contact-label">Instagram</div><div class="contact-val">@moovabeauty</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Moova</span>
+  <span class="footer-copy">© 2025 Moova Hair &amp; Beauty. Semua hak dilindungi.</span>
+  <div class="footer-links">
+    <a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#">Instagram</a>
+    <a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#">Kebijakan Privasi</a>
+    <a href="file:///Users/dwisaputra/Downloads/moova-hair-beauty%20(1).html#">Syarat &amp; Ketentuan</a>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+
+</body></html>
